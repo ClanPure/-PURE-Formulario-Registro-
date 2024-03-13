@@ -1,0 +1,405 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('img.jpg');
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  text-align: center;
+  transform-origin: 0 0;
+  transform: scale(1.0);
+  min-height: 100vh;
+}
+
+.formulario {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 22%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 7px 13px 37px #000;
+  backdrop-filter: blur(-0px);
+
+}
+
+.formulario .titulo {
+  left: 10%;
+  font-size: 20px;
+  color: #fff;
+}
+
+.formulario .box {
+  width: 30vh;
+  height: 30px;
+  margin: 30px 0;
+  position: relative;
+  left: 15%;
+
+}
+
+.box input {
+  width: 100%;
+  height: 100%;
+  background: #24303c;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 10px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+
+.box input::placeholder {
+  color: gray;
+
+}
+
+button {
+  width: 25%;
+  height: 40px;
+  border-radius: 40px;
+  background: purple;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(000, 000, 000, 0.7), 0 0 20px rgba(000, 000, 000, 0.7), 0 0 30px rgba(000, 000, 000, 0.7);
+  /* Sombra que simula el efecto de neón */
+  color: white;
+
+}
+
+.reglas {
+  position: absolute;
+  top: 40%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  background-color: rgba(000, 000, 000, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 7px 13px 37px #000;
+  backdrop-filter: blur(-0px);
+  color: #7323A7;
+}
+
+.reglas .titulo2 {
+  color: white;
+  font-size: 125%;
+}
+
+.reglas .letras {
+  color: #7323A7;
+  transition: color 0.5s;
+}
+
+.grupo-pure {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  background-color: rgba(000, 000, 000, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 7px 13px 37px #000;
+  backdrop-filter: blur(-0px);
+
+}
+
+.grupo-pure .Imagenpure {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 15%;
+  border-color: #7323A7;
+
+
+}
+
+
+.colordepure {
+  color: #fff;
+}
+
+.colordepure:hover {
+  color: #7323A7;
+  transition: 0.5s;
+}
+
+
+
+.aceptoterminos {
+  color: #fff;
+
+}
+
+.formulario-container {
+  width: 100%;
+  max-width: 2000px;
+  padding: 20px;
+  background-color: transparent;
+  color: #000;
+}
+
+.formulario-container:hover {
+  color: #fff;
+  transition: 0.5s;
+}
+
+#formulario-terminos {
+  display: flex;
+  flex-direction: column;
+}
+
+.textoaceptoterminos {
+  margin-left: 10px;
+}
+
+.selecion {
+  position: fixed;
+  background-color: #24303c;
+  color:purple;
+  border-radius: 10px;
+  font-size: 20px;
+  width: 6%;
+  top: 63%;
+  left: 75%;
+  border-color: #24303c;
+}
+
+.selecion:focus { 
+  outline-color: purple;
+}
+
+.tituloderedessociales {
+  color: #fff;
+}
+
+.tituloderedessociales:hover {
+  color: #7323A7;
+  transition: 0.5s;
+
+}
+
+.esquina-izquierda {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  margin: 0;
+  color: #000;
+  font-style: italic;
+  font-family: cursive;
+}
+
+.contacto-discord {
+  font-family: cursive;
+  position: fixed;
+  bottom: 30px; /* Ajusta según sea necesario */
+  left: 10px;
+  color: black; /* color del texto de Discord */
+  font-style: italic;
+
+}
+
+.contacto-discord:hover {
+  color: #fff;
+  transition: 0.5s;
+}
+
+.esquina-izquierda:hover {
+  color: #fff;
+  transition: 0.5s;
+}
+
+
+.custom-confirm-button {
+  width: 250px; /* Ajusta el ancho según tus necesidades */
+  background-color: purple; /* Color de fondo del botón */
+  color: red; /* Color del texto del botón */
+  border: none; /* Elimina el borde del botón */
+  border-radius: 40px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno del botón */
+  font-size: 16px; /* Tamaño del texto del botón */
+}
+/* Cambia el color del botón "OK" al pasar el mouse sobre él */
+.custom-confirm-button:hover {
+  background-color: darkpurple; /* Color de fondo al pasar el mouse */
+}
+
+.custom-popup {
+  border-radius: 10px; /* Bordes redondeados */
+  color: #24303c;
+}
+
+.custom-confirm-button2 {
+  width: 250px; /* Ajusta el ancho según tus necesidades */
+  background-color: purple; /* Color de fondo del botón */
+  color: red; /* Color del texto del botón */
+  border: none; /* Elimina el borde del botón */
+  border-radius: 40px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno del botón */
+  font-size: 16px; /* Tamaño del texto del botón */
+}
+/* Cambia el color del botón "OK" al pasar el mouse sobre él */
+.custom-confirm-button2:hover {
+  background-color: darkpurple; /* Color de fondo al pasar el mouse */
+}
+
+.custom-popup2 {
+  border-radius: 25px; /* Bordes redondeados */
+  color: #24303c;
+
+}
+
+.custom-confirm-button3 {
+  width: 250px; /* Ajusta el ancho según tus necesidades */
+  background-color: purple; /* Color de fondo del botón */
+  color: red; /* Color del texto del botón */
+  border: none; /* Elimina el borde del botón */
+  border-radius: 40px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno del botón */
+  font-size: 16px; /* Tamaño del texto del botón */
+}
+
+/* Cambia el color del botón "OK" al pasar el mouse sobre él */
+.custom-confirm-button3:hover {
+  background-color: darkpurple; /* Color de fondo al pasar el mouse */
+}
+
+.custom-popup3 {
+  border-radius: 25px; /* Bordes redondeados */
+  color: #24303c;
+
+}
+.custom-confirm-button4 {
+  width: 250px; /* Ajusta el ancho según tus necesidades */
+  background-color: purple; /* Color de fondo del botón */
+  color: red; /* Color del texto del botón */
+  border: none; /* Elimina el borde del botón */
+  border-radius: 40px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno del botón */
+  font-size: 16px; /* Tamaño del texto del botón */
+}
+/* Cambia el color del botón "OK" al pasar el mouse sobre él */
+.custom-confirm-button4:hover {
+  background-color: darkpurple; /* Color de fondo al pasar el mouse */
+}
+
+.custom-popup4 {
+  border-radius: 25px; /* Bordes redondeados */
+  color: #24303c;
+
+}
+
+
+.form-register a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.form-register .botons {
+  width: 100%;
+  background: purple;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+.form-register {
+  position: absolute;
+  bottom: 1cm;
+  left: 31%;
+  width: 40%;
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Color de fondo con opacidad */
+  padding: 25px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  /* Sombra decorativa */
+  border-radius: 15px;
+  /* Bordes redondeados */
+  text-align: center;
+  /* Posiciona el recuadro en la parte inferior y ocupa todo el ancho */
+}
+
+.corner-image {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 60px;
+  /* Ajusta el tamaño de la imagen según tus necesidades */
+  height: 60px;
+  /* Puedes establecer un tamaño cuadrado o ajustar según tus necesidades */
+  border-radius: 50%;
+  /* Hace que la imagen sea circular */
+  overflow: hidden;
+  /* Asegura que la imagen no se salga del área circular */
+}
+
+.corner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ajusta el tamaño y recorta la imagen para que se ajuste al área circular */
+}
+
+
+.info-box {
+  position: absolute;
+  bottom: 1cm;
+  left: 31%;
+  width: 40%;
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Color de fondo con opacidad */
+  padding: 25px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  /* Sombra decorativa */
+  border-radius: 15px;
+  /* Bordes redondeados */
+  text-align: center;
+  /* Posiciona el recuadro en la parte inferior y ocupa todo el ancho */
+}
+
+.corner-image {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 60px;
+  /* Ajusta el tamaño de la imagen según tus necesidades */
+  height: 60px;
+  /* Puedes establecer un tamaño cuadrado o ajustar según tus necesidades */
+  border-radius: 50%;
+  /* Hace que la imagen sea circular */
+  overflow: hidden;
+  /* Asegura que la imagen no se salga del área circular */
+}
+
+.corner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ajusta el tamaño y recorta la imagen para que se ajuste al área circular */
+}
+
+.formcontainer {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script src="script.js"></script>
+  <link rel="icon" href="purebordes.png">
+  <title>夏𝙋𝙐𝙍𝙀 |Formulario Registro|</title>
+</head>
+
+<body>
+  <div class="formulario">
+    <br>
+    <div class="titulo">
+      <h3>夏PURE | Formulario Registro | </h3>
+    </div>
+
+    <form id="discordForm" method="post">
+
+      <div class="box">
+        <label for="nombre"></label>
+        <input type="text" placeholder="Nombre" id="nombre" name="nombre" required><br>
+      </div>
+
+      <div class="box">
+        <label for="edad"></label>
+        <input type="number" placeholder="Edad:" id="edad" name="edad" required><br>
+      </div>
+
+      <div class="box">
+        <label for="nacionalidad"></label>
+        <input type="text" placeholder="Nacionalidad:" id="nacionalidad" name="nacionalidad" required><br>
+      </div>
+
+      <div class="box">
+        <label for="roblox"></label>
+        <input type="text" placeholder="Roblox user:" id="roblox" name="roblox user" required><br>
+      </div>
+
+      <div class="box">
+        <label for="discord"></label>
+        <input type="text" placeholder="Discord User:" id="discord" name="discord user" required><br>
+      </div>
+
+      <div class="box">
+        <label for="especialidad"></label>
+
+        <select class="selecion" id="especialidad" name="especialidad" onchange="actualizarInput()" required>
+          <option value="Farmer ⛏️">Farmer ⛏️</option>
+          <option value="Pvp 🔫">PvP 🔫</option>
+          <option value="Builder 👷‍♂️">Builder 👷‍♂️</option>
+          <option value="Raid 💣">Raid 💣</option>
+        </select>
+        <input type="text" id="especialidadInput" name="especialidad" placeholder="Especialidad" readonly required>
+      </div>
+
+      <div class="box">
+        <label for="horas"></label>
+        <input type="number" placeholder="Horas:" id="horas" name="horas" required><br>
+      </div>
+      <br>
+
+
+      <div class="button">
+        <button type="button" onclick="verificarYContinuar(); enviarMensaje();">Enviar</button>
+      </div>
+
+    </form>
+
+    <div id="cooldownMessage" style="display:none;">Por favor espera antes de enviar de nuevo.</div>
+
+ 
+    </section>
+
+
+
+
+    <div class="formulario-container">
+      <form id="formulario-terminos" onsubmit="return validarFormulario()" target="_blank" rel="noopener noreferrer">
+        <label for="aceptoTerminos">
+          <input type="checkbox" id="aceptoTerminos" name="aceptoTerminos" class="textoaceptoterminos">    Acepto los términos y condiciones</label>
+        </label>
+      </form>
+    </div>
+
+
+
+
+
+  </div>
+
+  <div class="info-box">
+    <h3>🌸 𝘽𝙄𝙀𝙉𝙑𝙀𝙉𝙄𝘿𝙊𝙎 𝘼 夏𝙋𝙐𝙍𝙀 🌸 | ESP/ENG Clan |</h3>
+    <br>
+    <h4>﻿¡Saludos! Somos un clan de Fallen en español 🇪🇸, y también contamos con algunas personas que hablan 🇺🇸
+      inglés. Estamos en la búsqueda de jugadores que quieran 🎮 unirse a nosotros. Somos muy 😸 amigables, y si no
+      sabes mucho del juego, no te preocupes, estamos dispuestos a enseñarte lo básico y ayudarte a mejorar. 🧑‍🏫
+    </h4>
+  </div>
+
+
+  <div class="reglas">
+    <br>
+    <div class="titulo2">
+      <h3> Reglas de la comunidad 夏PURE
+      </h3>
+    </div>
+    <br>
+    <p class="letras">
+    <h4>
+      『🤝』Sé Amable:
+      Trata a los demás con amabilidad y respeto. (Mute)30m +/-
+    </h4>
+    <br>
+    <h4>
+      『🚫』No al Discurso de Odio:
+      Evita cualquier forma de discurso de odio, incluso si no estás de acuerdo con alguien. (Warn)
+    </h4>
+    <br>
+    <h4>
+      『🌍』 Sin Discriminación:
+      No toleramos la discriminación por raza, género, sexualidad o discapacidad. (Mute) 1h+
+    </h4>
+    <br>
+    <h4>
+      『🚷』 No Hostigues:
+      Evita el hostigamiento y no incites a la violencia. (Warn)
+    </h4>
+    <br>
+    <h4>
+      『🔞』 Contenido Apropiado:
+      No publiques contenido NSFW u obsceno, incluyendo desnudez, violencia o perturbador. (Mute) 1d +
+    </h4>
+    <br>
+    <h4>
+      『📵』 Sin Contenido Explícito:
+      La distribución de contenido explícito o controversial no está permitida bajo ninguna circunstancia. (Mute) 1d +
+    </h4>
+    <br>
+    <h4>
+      『🚫』 Evita la Promoción:
+      No realices publicidad o promoción de canales en mensajes o invitaciones. (Ban)
+    </h4>
+    <br>
+    <h4>
+      ¡Gracias por cumplir con estas reglas y hacer de nuestra comunidad un lugar genial para todos!
+    </h4>
+    <br>
+    </p>
+  </div>
+
+  <div class="grupo-pure">
+  <br> 
+    <div class="tituloderedessociales">
+      <h4>Redes sociales 夏𝙋𝙐𝙍𝙀</h4>
+    </div>
+    <br>
+
+    <img src="pure.png" class="Imagenpure">
+
+    <br>
+
+    <div class="redes-sociales">
+      <a href="https://www.roblox.com/groups/12276638/PURE#!/about" target="_blank" rel="noopener noreferrer">
+        <img src="roblox-Photoroom.png-Photoroom.png" style="height: auto; max-width: 100%; width: 28px; margin-right: 10px;">
+      </a>
+    
+      <a href="https://www.youtube.com/channel/UClg-n5eb4_hRtjz-Vz_vXUw" target="_blank" rel="noopener noreferrer">
+        <img src="youtube_logo.png" style="height: auto; max-width: 100%; width: 35px; margin-right: 10px;">
+      </a>
+    
+      <a href="https://discord.gg/M3vT93rM" target="_blank" rel="noopener noreferrer">
+        <img src="discordlogo.png" style="height: auto; max-width: 100%; width: 31px;">
+      </a>
+
+
+      <a href="https://www.tiktok.com/@pureclanfallen?_t=8kSvgbqIJqI&_r=1" target="_blank" rel="noopener noreferrer">
+        <img src="tiktoklogo.png" style="height: auto; max-width: 100%; width: 38px;">
+      </a>
+    </div>
+  
+  </div>
+
+  <div class="esquina-izquierda">
+    <p>Discord Contact: adrip1#1888</p>
+  </div>
+
+  <div class="contacto-discord">
+    <p>Creado por: Adrip01</p>
+  </div>
+
+
+  <div class="corner-image">
+    <img src="pure.png"="Imagen Circular">
+  </div>
+
+
+</body>
+
+</html>
